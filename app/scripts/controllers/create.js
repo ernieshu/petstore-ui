@@ -51,7 +51,7 @@ angular.module('petstoreUiApp')
 
       $http.post('pet', petToBeAdded)
         .then(function(data, status, headers, config) {
-                $scope.feedbackMessage = 'Entity created with id:' + data.id;
+                $scope.feedbackMessage = 'Entity created with id:' + data.data.id;
               },
               function(data, status, headers, config){
                 if (status='500') {
