@@ -1,0 +1,11 @@
+.bowerrc
+.editorconfig
+.gitignore
+.jshintrc
+.yo-rc.json
+*Gruntfile.js
+bower.json
+data
+karma.conf.js
+node_modules
+package.json
