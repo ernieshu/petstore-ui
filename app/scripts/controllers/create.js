@@ -48,13 +48,13 @@ angular.module('petstoreUiApp')
       };
 
       $http.post('pet', petToBeAdded)
-        .then(function(data, status, headers, config) {
+        .then(function(data) {
                 $scope.feedbackMessage = 'Entity created with id:' + data.data.id;
               },
-              function(data, status, headers, config) {
-                if (status='500') {
+              function(data) {
+                if (data.status==='500') {
                   console.log("system error");
                 }
-        });
+              });
     };
   });

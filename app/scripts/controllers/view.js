@@ -4,7 +4,7 @@ angular.module('petstoreUiApp')
 
     this.findAPet = function(data) {
       $http.get('pet/' + this.searchPetId)
-        .then(function(data, status, headers, config) {
+        .then(function(data) {
           var returnPet = data.data
           console.log("Retrieving info for pet name: " + returnPet.name);
           // if we've gotten the pet, map it back to the GUI
@@ -17,7 +17,7 @@ angular.module('petstoreUiApp')
             photoUrls: returnPet.photoUrls
           };
           $scope.feedbackMessage = null;
-        }, function(data, status, headers, config) {
+        }, function(data) {
           if (data.status===404) {
             $scope.feedbackMessage = 'No pet found';
             $scope.viewPet = null;
