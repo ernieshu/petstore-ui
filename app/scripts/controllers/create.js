@@ -51,10 +51,10 @@ angular.module('petstoreUiApp')
         .then(function(data, status, headers, config) {
                 $scope.feedbackMessage = 'Entity created with id:' + data.data.id;
               },
-              function(data, status, headers, config){
+              function(data, status, headers, config) {
                 if (status='500') {
                   console.log("system error");
                 }
-              });
+        });
     };
   });
