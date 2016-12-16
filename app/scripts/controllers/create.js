@@ -2,8 +2,6 @@
 angular.module('petstoreUiApp')
   .controller('CreateCtrl', function ($scope, $http) {
 
-    console.log('I am here')
-
     this.categories = [
       { id: 0, name: 'Category 0'},
       { id: 1, name: 'Category 1'},
