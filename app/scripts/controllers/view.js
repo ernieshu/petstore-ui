@@ -2,23 +2,23 @@
 angular.module('petstoreUiApp')
   .controller('ViewCtrl', function ($scope, $http) {
 
-     this.findAPet = function(data) {
+    this.findAPet = function(data) {
       $http.get('pet/' + this.searchPetId)
-        .success(function(data, status, headers, config) {
-          console.log("Retrieving info for pet name: " + data.name);
+        .then(function(data, status, headers, config) {
+          var returnPet = data.data
+          console.log("Retrieving info for pet name: " + returnPet.name);
           // if we've gotten the pet, map it back to the GUI
           $scope.viewPet = {
-            id: data.id,
-            name: data.name,
-            category: data.category,
-            status: data.status,
-            tags: data.tags,
-            photoUrls: data.photoUrls
+            id: returnPet.id,
+            name: returnPet.name,
+            category: returnPet.category,
+            status: returnPet.status,
+            tags: returnPet.tags,
+            photoUrls: returnPet.photoUrls
           };
           $scope.feedbackMessage = null;
-        })
-        .error(function(data, status, headers, config){
-          if (status===404) {
+        }, function(data, status, headers, config) {
+          if (data.status===404) {
             $scope.feedbackMessage = 'No pet found';
             $scope.viewPet = null;
           }
