@@ -34,7 +34,7 @@ angular.module('petstoreUiApp')
       };
 
       // only populate certain items if they've been entered
-      if (this.pet.status!==null) {
+      if (this.pet.status!=null) {
         petToBeAdded['status'] = this.pet.status.toUpperCase();
       };
       if (this.pet.categoryId!=null) {
