@@ -19,4 +19,4 @@ deploy:
   organization: ernie.shu.org
   space: development
   on:
-    repo: ernieshu/petstore-ui
+    repo: ernieshu/petstore-ui-2
