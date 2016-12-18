@@ -8,13 +8,15 @@ version 0.15.1.
 Run the 'buildAndRun.sh' file, to:
 *  run the 'buildAndRun.sh' script to build and run the application.
 
-
-## Testing
-
-Running `grunt test` will run the unit tests with karma.
 ## Customization Additions
 
 * Added 'ng tags input' library for multiple single input
 * Added 'bootstrap' for much nicer look and feel
     * Note that had to revert to bootstrap version 3.3.4 
     * Execute via commands 'npm install bootstrap@3.3.4 --save/ bower install bootstrap#3.3.4 --save'
+
+## TODOs
+
+Find below a list of items that would make this implementation better.
+* Migration of shared common service calls to a 'petService' singleton.
+* Addition of E2E tests.
