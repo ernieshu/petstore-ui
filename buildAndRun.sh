@@ -1,3 +1,6 @@
+npm install
+bower install
+
 grunt test
 
 if [ $? -eq 0 ] 

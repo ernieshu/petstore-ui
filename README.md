@@ -5,7 +5,9 @@ version 0.15.1.
 
 ## Build & development
 
-Run `grunt` for building and `grunt serve` for preview.
+Run the 'buildAndRun.sh' file, to:
+*  run the 'buildAndRun.sh' script to build and run the application.
+
 
 ## Testing
 
